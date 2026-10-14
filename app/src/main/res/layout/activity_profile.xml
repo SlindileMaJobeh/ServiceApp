@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_top"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:navigationIconTint="@color/text_white"
+                app:titleTextColor="@color/text_white" />
+
+            <!-- Avatar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/avatar_xl"
+                    android:layout_height="@dimen/avatar_xl"
+                    android:src="@drawable/ic_person_placeholder"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="@color/text_white"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_white"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_account_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Client"
+                    android:textSize="13sp"
+                    android:textColor="#CCFFFFFF"
+                    android:background="@drawable/bg_tag_white"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/background_white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="20dp">
+
+                <!-- Rating -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp"
+                    android:layout_marginBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_star_filled"
+                        app:tint="@color/star_rating"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_rating"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="No ratings yet"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Username -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="14dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_account" app:tint="@color/primary"
+                        android:layout_marginEnd="12dp" />
+                    <TextView android:id="@+id/tv_username" android:layout_width="0dp"
+                        android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="@username" android:textSize="14sp" android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Email -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="14dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_email" app:tint="@color/primary"
+                        android:layout_marginEnd="12dp" />
+                    <TextView android:id="@+id/tv_email" android:layout_width="0dp"
+                        android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="email@example.com" android:textSize="14sp" android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Phone -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="14dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_phone" app:tint="@color/primary"
+                        android:layout_marginEnd="12dp" />
+                    <TextView android:id="@+id/tv_phone" android:layout_width="0dp"
+                        android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="+27 xx xxx xxxx" android:textSize="14sp" android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Join Date -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="14dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_calendar" app:tint="@color/primary"
+                        android:layout_marginEnd="12dp" />
+                    <TextView android:id="@+id/tv_join_date" android:layout_width="0dp"
+                        android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Joined 2024" android:textSize="14sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Logout Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/logout"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="#F44336"
+            android:textColor="@color/text_white"
+            app:cornerRadius="12dp"
+            style="@style/Widget.MaterialComponents.Button" />
+
+    </LinearLayout>
+</ScrollView>
